@@ -1,0 +1,66 @@
+{% liquid
+  assign hero_title = section.settings['hero-title']
+  assign hero_sub_title = section.settings['hero-sub-title']
+  assign hero_featuretext1 = section.settings['feature-text1']
+  assign hero_featuretext2 = section.settings['feature-text2']
+  assign hero_feature-icon1 = section.settings['feature-icon1']
+  assign hero_feature-icon2 = section.settings['feature-icon2']
+%}
+
+{% schema %}
+{
+  "name": "hero-section",
+  "tag": "section",
+  "class": "hero-section",
+  "limit": 1,
+  "disabled_on": {
+    "groups": ["header", "footer", "aside"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "hero-title",
+      "label": "Add Hero Title",
+      "default": "Wij houden van fietsen"
+    },
+
+    {
+      "type": "text",
+      "id": "hero-sub-title",
+      "label": "Add Hero SUb Title",
+      "default": "Ultiem fietsplezier door middel van optimale service, kwaliteit en vakmanschap. Dat staat bij ons voorop!"
+    },
+
+    {
+      "type": "text",
+      "id": "feature-text1",
+      "label": "add feature text1",
+      "default": "Plan een advies gesprek"
+    },
+
+    {
+      "type": "image_picker",
+      "id": "feature-icon1",
+      "label": "add feature icon1"
+    },
+
+    {
+      "type": "text",
+      "id": "feature-text2",
+      "label": "add feature text2",
+      "default": "Plan een advies gesprek"
+    },
+
+    {
+      "type": "image_picker",
+      "id": "feature-icon2",
+      "label": "add feature icon2"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Add hero section"
+    }
+  ]
+}
+{% endschema %}
