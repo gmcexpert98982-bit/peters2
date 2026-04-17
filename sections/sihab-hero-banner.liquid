@@ -1,14 +1,19 @@
 {% liquid
-  assign hero_title = section.settings['hero-title']
-  assign hero_sub_title = section.settings['hero-sub-title']
-  assign hero_featuretext1 = section.settings['feature-text1']
-  assign hero_featuretext2 = setion.settings['feature-text2']
-  assign hero_feature-icon1 = section.settings['feature-icon1']
-  assign hero_feature-icon2 = section.settings['feature-icon2']
+  assign hero_title = section.settings.hero-title
+  assign hero_sub_title = section.settings.hero-sub-title
+  assign hero_featuretext1 = section.settings.feature-text1
+  assign hero_featuretext2 = setion.settings.feature-text2
+  assign hero_feature-icon1 = section.settings.feature-icon1
+
 %}
 
-<section>{{ hero_title }}</section>
-<section>{{ hero_title }}</section>
+
+
+
+
+
+{{ hero_title }}
+{{ hero_title }}
 
 {% schema %}
 {
